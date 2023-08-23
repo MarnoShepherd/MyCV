@@ -1,0 +1,253 @@
+/* styles.css */
+
+/* Reset some default browser styles */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+/* Apply styles to the background class */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+header {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.451);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    transition: color 0.5s;
+    animation: headerAnimation 5s infinite; /* Apply the animation */
+}
+
+header p {
+    margin-bottom: 5px;
+    transition: color 0.5s;
+    animation: headerAnimation 5s infinite; /* Apply the animation */
+}
+
+@keyframes headerAnimation {
+    0%, 100% {
+        opacity: 1;
+        color:#666; /* Make the text color white */
+    }
+    50% {
+        opacity: 0.8; /* Adjust the opacity for a brighter effect */
+        color: #FFFFCC; /* You can use a lighter color for the text */
+    }
+}
+  
+  .image {
+    max-width: 200px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.451);
+  }
+  
+  .bio p{
+    padding: 0px;
+    color: #666;
+  }
+
+  .bio p:hover {
+    color: #fdfdfd;
+  }
+  
+  .container {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .image-container {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .bio-container {
+
+    padding: 20px;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  }  
+
+header h1 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #666;
+}
+
+/* Style the contact section */
+#contact {
+    padding: 20px;
+}
+
+
+#contact ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+#contact li {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+#contact li:hover{
+    color: rgb(255, 255, 255);
+  }
+
+#contact a {
+    color: #4D4DFF;
+    text-decoration: none;
+}
+
+#contact img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Style the skills section */
+#skills {
+    padding: 20px;
+}
+
+
+#skills ul {
+    list-style-type: none;
+}
+
+#skills li {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+#skills li:hover{
+    color: rgb(255, 255, 255);
+  }
+
+/* Style the education section */
+#education {
+    padding: 20px;
+}
+
+
+#education p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#education p:hover{
+    color: rgb(255, 255, 255);
+  }
+
+/* Style the experience section */
+#experience {
+    padding: 20px;
+}
+
+
+#experience p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#experience p:hover{
+    color: rgb(255, 255, 255);
+  }
+
+/* Style the footer */
+footer {
+    color:white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.451);
+    backdrop-filter: blur(10px);
+}
+
+footer p {
+    transition: color 0.5s;
+    animation: headerAnimation 5s infinite; /* Apply the animation */
+}
+
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --animation-color: #4D4DFF;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  
+  /* Animation */
+  @keyframes headerEffect {
+    0%, 100% {
+      width: 100%;
+    }
+    50% {
+      width: 0%;
+    }
+  }
+  
+  /* Apply animation to hover-text */
+  .button .hover-text {
+    animation: headerEffect 5s infinite;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+  }
+
+  .content{
+    color: #c2c2c2;
+  }
+
+  .content:hover{
+    color: rgb(255, 255, 255);
+  }
